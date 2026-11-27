@@ -12,5 +12,5 @@
 </p>
 
 <p align="center">
-  <sub><a href="https://www.linkedin.com/in/muthukumaaran-c-9775a2440">LinkedIn</a>&emsp;·&emsp;<a href="mailto:muthukumaaran.mk@gmail.com">Gmail</a>&emsp;·&emsp;<a href="https://leetcode.com/u/MK-initone/">LeetCode</a></sub>
+  <sub><a href="https://www.linkedin.com/in/muthukumaaran-mk">LinkedIn</a>&emsp;·&emsp;<a href="mailto:muthukumaaran.mk@gmail.com">Gmail</a>&emsp;·&emsp;<a href="https://leetcode.com/u/muthukumaaran-mk">LeetCode</a></sub>
 </p>
