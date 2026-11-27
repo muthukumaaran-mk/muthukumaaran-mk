@@ -4,13 +4,15 @@
 <a href="https://tameimpala.lnk.to/loser"><img src="assets/equalizer.svg" width="154" height="20" alt="Tame Impala — Loser; play song, with animated equaliser"></a><br>
 <picture><img src="assets/divider.svg" width="800" height="1" alt=""></picture></p>
 
+<p align="center"><strong>Connect</strong></p>
+
 <p align="center">
-  <strong>Connect</strong><br>
-  <a href="https://www.linkedin.com/in/muthukumaaran-c-9775a2440"><img src="assets/icons/linkedin.svg" width="32" height="32" alt="LinkedIn — Muthu Kumaaran C"></a>&nbsp;&nbsp;
-  <a href="mailto:muthukumaaran.mk@gmail.com"><img src="assets/icons/gmail.svg" width="32" height="32" alt="Email — muthukumaaran.mk@gmail.com"></a>&nbsp;&nbsp;
-  <a href="https://leetcode.com/u/MK-initone/"><img src="assets/icons/leetcode.svg" width="32" height="32" alt="LeetCode — MK-initone"></a><br>
-  <img src="assets/connectivity.svg" width="800" alt="Two monochrome particle surfaces form connections and exchange particles">
+  <a href="https://www.linkedin.com/in/muthukumaaran-c-9775a2440"><img src="assets/icons/linkedin.svg" width="32" height="32" alt="LinkedIn — Muthu Kumaaran C"></a>&emsp;
+  <a href="mailto:muthukumaaran.mk@gmail.com"><img src="assets/icons/gmail.svg" width="32" height="32" alt="Email — muthukumaaran.mk@gmail.com"></a>&emsp;
+  <a href="https://leetcode.com/u/MK-initone/"><img src="assets/icons/leetcode.svg" width="32" height="32" alt="LeetCode — MK-initone"></a>
 </p>
+
+<p align="center"><img src="assets/connectivity.svg" width="800" alt="Two monochrome particle surfaces form connections and exchange particles"></p>
 
 <h3 align="center">Tech Stack</h3>
 
@@ -22,8 +24,8 @@
   <tr>
     <td align="center" valign="top" width="144"><img src="assets/icons/mongodb.svg" width="36" height="36" align="absmiddle" alt="MongoDB logo"> <sub>MongoDB</sub></td>
     <td align="center" valign="top" width="144"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/icons/express-dark.svg"><img src="assets/icons/express.svg" width="36" height="36" align="absmiddle" alt="Express.js logo"></picture> <sub>Express&#8203;.js</sub></td>
-    <td align="center" valign="top" rowspan="2" width="144"><img src="assets/icons/python.svg" width="36" height="36" align="absmiddle" alt="Python logo"> <sub>Python</sub></td>
-    <td align="center" valign="top" rowspan="2" width="144"><img src="assets/icons/javascript.svg" width="36" height="36" align="absmiddle" alt="JavaScript logo"> <sub>Java&#8203;Script</sub></td>
+    <td align="center" valign="middle" rowspan="2" width="144"><img src="assets/icons/python.svg" width="36" height="36" align="absmiddle" alt="Python logo"> <sub>Python</sub></td>
+    <td align="center" valign="middle" rowspan="2" width="144"><img src="assets/icons/javascript.svg" width="36" height="36" align="absmiddle" alt="JavaScript logo"> <sub>Java&#8203;Script</sub></td>
   </tr>
   <tr>
     <td align="center" valign="top"><img src="assets/icons/react.svg" width="36" height="36" align="absmiddle" alt="React logo"> <sub>React</sub></td>
@@ -46,7 +48,7 @@
   <tr>
     <td align="center" valign="top" width="144"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/icons/aws-dark.svg"><img src="assets/icons/aws.svg" width="44" height="36" align="absmiddle" alt="AWS logo"></picture> <sub>AWS</sub></td>
     <td align="center" valign="top" width="144"><img src="assets/icons/docker.svg" width="36" height="36" align="absmiddle" alt="Docker logo"> <sub>Docker</sub></td>
-    <td align="center" valign="top" rowspan="2" colspan="2"><img src="assets/icons/git.svg" width="36" height="36" align="absmiddle" alt="Git logo"> <sub>Git</sub></td>
+    <td align="center" valign="middle" rowspan="2" colspan="2"><img src="assets/icons/git.svg" width="36" height="36" align="absmiddle" alt="Git logo"> <sub>Git</sub></td>
   </tr>
   <tr>
     <td align="center" valign="top" colspan="2"><img src="assets/icons/linux.svg" width="36" height="36" align="absmiddle" alt="Linux logo"> <sub>Linux</sub></td>
