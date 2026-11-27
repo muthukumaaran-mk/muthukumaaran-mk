@@ -155,7 +155,7 @@ const technologies = {
 };
 
 async function loadLogos() {
-  const names = ['linkedin', 'gmail', 'leetcode', ...Object.keys(technologies)];
+  const names = Object.keys(technologies);
   return Object.fromEntries(await Promise.all(names.map(async name => {
     const variant = ['aws', 'express'].includes(name) ? `${name}-dark` : name;
     const file = await readFile(new URL(`../assets/icons/${variant}.svg`, import.meta.url), 'utf8');
@@ -237,18 +237,13 @@ function renderScene(logos, compact) {
     const [x, y, scale] = compact ? body.mobile : body.desktop;
     return driftingObject(body.art, { ...body, x, y, scale, phase: index * 2.4, distance: compact ? 9 : 13 + index % 4 * 3 });
   }).join('\n');
-  const iconSize = compact ? 23 : 29;
-  const social = ['linkedin', 'gmail', 'leetcode'].map((name, index) => logo(logos, name, width / 2 + 7 + index * (compact ? 34 : 43), (compact ? 37 : 51) - iconSize / 2, iconSize)).join('');
-
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="img" aria-labelledby="scene-title scene-description" font-family="system-ui,Segoe UI,Arial,sans-serif">
-  <title id="scene-title">Connect and Tech Stack in a white-dot space scene</title>
-  <desc id="scene-description">A sun, ringed planets, a galaxy, a blue whale, a squid, and a jellyfish drift and rotate around the Connect icons and Tech Stack. MERN Stack: MongoDB, Express.js, React, Node.js. Languages: Python and JavaScript. Backend: FastAPI and Celery. Databases and Caching: MySQL and Redis. Infrastructure: AWS, Docker, and Linux. Version Control: Git.</desc>
+  <title id="scene-title">Tech Stack in a white-dot space scene</title>
+  <desc id="scene-description">A sun, ringed planets, a galaxy, a blue whale, a squid, and a jellyfish drift and rotate around the Tech Stack. MERN Stack: MongoDB, Express.js, React, Node.js. Languages: Python and JavaScript. Backend: FastAPI and Celery. Databases and Caching: MySQL and Redis. Infrastructure: AWS, Docker, and Linux. Version Control: Git.</desc>
   <clipPath id="space-clip"><rect x="1" y="1" width="${width - 2}" height="${height - 2}" rx="14"/></clipPath>
   <g clip-path="url(#space-clip)">
     <rect width="${width}" height="${height}" fill="#0c0c0c"/>
     <g fill="#ffffff">${starField(width, height, compact)}${sky}</g>
-    ${label('Connect', width / 2 - (compact ? 37 : 49), compact ? 37 : 51, compact ? 17 : 22, 670)}
-    ${social}
     ${label('Tech Stack', width / 2, compact ? 113 : 144, compact ? 21 : 29, 700)}
     ${card(logos, width, compact)}
   </g>
