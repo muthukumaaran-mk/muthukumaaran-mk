@@ -55,4 +55,4 @@
   </tr>
 </table>
 
-<p align="center"><img src="assets/particle-wave.svg" width="800" alt="A flowing three-dimensional mesh of white and grey particles"></p>
+<p align="center"><img src="assets/particle-wave.svg" width="1200" alt="Colourful particle waves flow through a star field with orbiting moons, a blue whale, a squid, and a jellyfish"></p>

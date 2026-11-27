@@ -1,5 +1,6 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
+import { astronomyWave } from './astronomy-wave.mjs';
 
 // Dependency-free SVG/SMIL. Open the generated files directly to see the loops.
 // Every trajectory is periodic; the last sample equals the first sample.
@@ -49,22 +50,6 @@ function connectivity() {
   return svg('Two monochrome particle surfaces exchanging connections', body);
 }
 
-function wave() {
-  let body = '';
-  for (let row = 0; row < 17; row++) {
-    for (let column = 0; column < 74; column++) {
-      const depth = row / 16;
-      const u = column / 73;
-      const x = 400 + (u - 0.5) * (630 + depth * 135);
-      const y = t => 51 + Math.sin(u * tau * 1.65 + t + depth * 2.4) * 18 + Math.sin(u * tau * 0.8 - t + depth) * 10 + (depth - 0.5) * 32;
-      const grey = Math.round(125 + depth * 118);
-      const opacity = (0.16 + depth * 0.68) * (0.15 + Math.sin(u * Math.PI) ** 0.4 * 0.85);
-      body += `<circle cx="${number(x)}" cy="${number(y(0))}" r="${number(0.4 + depth * 0.48)}" fill="rgb(${grey},${grey},${grey})" opacity="${number(opacity)}">${animation('cy', y)}</circle>`;
-    }
-  }
-  return svg('Seamlessly looping monochrome three-dimensional particle wave', body);
-}
-
 function equalizer() {
   let body = '<path d="M2 6.5 7 10 2 13.5Z" fill="#92979e"/>';
   for (let i = 0; i < 4; i++) {
@@ -77,7 +62,7 @@ function equalizer() {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154 20" width="154" height="20" role="img" aria-label="Tame Impala — Loser; play song"><title>Tame Impala — Loser; play song</title>${body}</svg>\n`;
 }
 
-for (const [name, content] of [['connectivity.svg', connectivity()], ['particle-wave.svg', wave()], ['equalizer.svg', equalizer()]]) {
+for (const [name, content] of [['connectivity.svg', connectivity()], ['particle-wave.svg', astronomyWave()], ['equalizer.svg', equalizer()]]) {
   await writeFile(new URL(name, destination), content);
   console.log(`${fileURLToPath(new URL(name, destination))}: ${Buffer.byteLength(content).toLocaleString()} bytes`);
 }
