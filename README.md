@@ -13,7 +13,7 @@
 
 <p align="center">
   <picture>
-    <source media="(max-width: 544px)" srcset="assets/space-scene-mobile.svg">
-    <img src="assets/space-scene.svg" width="760" alt="Tech Stack in an animated white-dot star field with planets, sea creatures, a pizza slice, and a coffee mug">
+    <source media="(max-width: 544px)" srcset="assets/space-scene-mobile.svg?v=2">
+    <img src="assets/space-scene.svg?v=2" width="760" alt="Tech Stack in an animated white-dot star field with planets, sea creatures, a pizza slice, and a coffee mug">
   </picture>
 </p>

@@ -4629,7 +4629,7 @@
 <circle cx="-0.92" cy="-9.96" r="1" opacity="0.35"/>
     <animateTransform attributeName="transform" type="rotate" values="-28;28;-28" dur="24s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".42 0 .58 1;.42 0 .58 1"/>
   </g><animateTransform attributeName="transform" type="translate" values="12.21 3.08;10.64 5.16;8.34 6.88;5.48 8.13;2.24 8.84;-1.15 8.93;-4.46 8.42;-7.47 7.34;-9.97 5.76;-11.79 3.78;-12.81 1.55;-12.95 -0.79;-12.21 -3.08;-10.64 -5.16;-8.34 -6.88;-5.48 -8.13;-2.24 -8.84;1.15 -8.93;4.46 -8.42;7.47 -7.34;9.97 -5.76;11.79 -3.78;12.81 -1.55;12.95 0.79;12.21 3.08" dur="24s" repeatCount="indefinite"/></g></g>
-<g transform="translate(540 65) scale(1.06)"><g><g transform="rotate(-20)"><circle cx="-30" cy="-19" r="0.77" opacity="0.48"/>
+<g transform="translate(382 84) scale(1.36)"><g><g transform="rotate(-20)"><circle cx="-30" cy="-19" r="0.77" opacity="0.48"/>
 <circle cx="-28.12" cy="-20.4" r="0.87" opacity="0.93"/>
 <circle cx="-26.19" cy="-21.7" r="1" opacity="0.51"/>
 <circle cx="-24.23" cy="-22.9" r="0.91" opacity="0.88"/>
@@ -4767,7 +4767,7 @@
 <circle cx="4" cy="18" r="0.9" opacity="0.67"/>
     <animateTransform attributeName="transform" type="rotate" values="-51;11;-51" dur="23s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".42 0 .58 1;.42 0 .58 1"/>
   </g><animateTransform attributeName="transform" type="translate" values="-14.79 4.21;-15.87 1.42;-15.86 -1.46;-14.77 -4.24;-12.68 -6.73;-9.72 -8.77;-6.1 -10.21;-2.06 -10.95;2.11 -10.94;6.15 -10.19;9.76 -8.75;12.71 -6.71;14.79 -4.21;15.87 -1.42;15.86 1.46;14.77 4.24;12.68 6.73;9.72 8.77;6.1 10.21;2.06 10.95;-2.11 10.94;-6.15 10.19;-9.76 8.75;-12.71 6.71;-14.79 4.21" dur="23s" repeatCount="indefinite"/></g></g>
-<g transform="translate(135 607) scale(1.14)"><g><g transform="rotate(13)"><g transform="rotate(0)"><circle cx="22" cy="0" r="0.76" opacity="0.6"/>
+<g transform="translate(127 553) scale(1.28)"><g><g transform="rotate(13)"><g transform="rotate(0)"><circle cx="22" cy="0" r="0.76" opacity="0.6"/>
 <circle cx="21.7" cy="0.76" r="0.76" opacity="0.64"/>
 <circle cx="20.81" cy="1.5" r="0.76" opacity="0.69"/>
 <circle cx="19.35" cy="2.2" r="0.76" opacity="0.73"/>

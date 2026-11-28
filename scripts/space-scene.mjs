@@ -267,8 +267,8 @@ function renderScene(logos, compact) {
     { art: dottedOrbit(83, .36, -15, 135, .41) + sphere(54, 77), desktop: [570, 603, 1.06], mobile: [181, 527, .64], period: 40, tilt: -12 },
     { art: sphere(13, 3), desktop: [348, 598, 1], mobile: [103, 97, .65], period: 19, turnBy: 38 },
     { art: sphere(10, 51), desktop: [747, 590, 1.25], mobile: [232, 550, .75], period: 24, turnBy: 28 },
-    { art: pizza(), desktop: [540, 65, 1.06], mobile: [166, 55, .55], period: 23, tilt: -20, turnBy: 31 },
-    { art: coffeeMug(), desktop: [135, 607, 1.14], mobile: [38, 484, .5], period: 31, tilt: 13, turnBy: 16 },
+    { art: pizza(), desktop: [382, 84, 1.36], mobile: [148, 55, .62], period: 23, tilt: -20, turnBy: 31 },
+    { art: coffeeMug(), desktop: [127, 553, 1.28], mobile: [39, 488, .54], period: 31, tilt: 13, turnBy: 16 },
   ];
   const sky = bodies.map((body, index) => {
     const [x, y, scale] = compact ? body.mobile : body.desktop;
