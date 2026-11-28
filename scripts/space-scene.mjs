@@ -173,6 +173,34 @@ function coffeeMug() {
   return [rim, cup, handle, steam].join('\n');
 }
 
+function openBook() {
+  const pages = outline([0, -14], [
+    [[-12, -25], [-31, -23], [-43, -18]],
+    [[-43, -3], [-43, 13], [-43, 23]],
+    [[-32, 16], [-11, 15], [0, 26]],
+    [[12, 15], [31, 16], [43, 23]],
+    [[43, 8], [43, -4], [43, -18]],
+    [[32, -23], [12, -25], [0, -14]],
+    [[0, -2], [0, 14], [0, 26]],
+  ]);
+  const cover = outline([-45, -14], [
+    [[-48, -2], [-48, 14], [-48, 28]],
+    [[-33, 22], [-11, 23], [0, 31]],
+    [[12, 23], [32, 22], [48, 28]],
+    [[48, 14], [48, -2], [45, -14]],
+  ], 2.8);
+  const text = [-10, -2, 6].map(y => outline([-35, y], [
+    [[-25, y - 4], [-14, y - 3], [-7, y + 3]],
+  ], 3)).join('\n');
+  const starfish = scatter(45, i => {
+    const angle = i * turn / 45 - Math.PI / 2;
+    const arm = .5 + .5 * Math.cos(i * turn / 9);
+    const radius = 4.6 + 8.1 * arm ** 1.7;
+    return dot(22 + radius * Math.cos(angle), -1 + radius * Math.sin(angle), .87, .88);
+  });
+  return [pages, cover, text, starfish, dot(22, -1, 1.2, .85)].join('\n');
+}
+
 function driftingObject(art, { x, y, scale = 1, tilt = 0, distance = 16, period = 24, phase = 0, turnBy = 16 }) {
   const positions = Array.from({ length: 24 }, (_, i) => {
     const step = i * turn / 24 + phase;
@@ -269,6 +297,8 @@ function renderScene(logos, compact) {
     { art: sphere(10, 51), desktop: [747, 590, 1.25], mobile: [232, 550, .75], period: 24, turnBy: 28 },
     { art: pizza(), desktop: [382, 84, 1.36], mobile: [148, 55, .62], period: 23, tilt: -20, turnBy: 31 },
     { art: coffeeMug(), desktop: [127, 553, 1.28], mobile: [39, 488, .54], period: 31, tilt: 13, turnBy: 16 },
+    { art: sphere(20, 239), desktop: [276, 101, 1.2], mobile: [85, 43, .62], period: 27, tilt: -16, turnBy: 23 },
+    { art: openBook(), desktop: [980, 616, 1.28], mobile: [310, 489, .45], period: 33, tilt: 9, turnBy: 14 },
   ];
   const sky = bodies.map((body, index) => {
     const [x, y, scale] = compact ? body.mobile : body.desktop;
@@ -276,7 +306,7 @@ function renderScene(logos, compact) {
   }).join('\n');
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="img" aria-labelledby="scene-title scene-description" font-family="system-ui,Segoe UI,Arial,sans-serif">
   <title id="scene-title">Tech Stack in a white-dot space scene</title>
-  <desc id="scene-description">A sun, ringed planets, a galaxy, a blue whale, a squid, a jellyfish, a pizza slice, and a coffee mug drift and rotate around the Tech Stack. MERN Stack: MongoDB, Express.js, React, Node.js. Languages: Python and JavaScript. Backend: FastAPI and Celery. Databases and Caching: MySQL and Redis. Infrastructure: AWS, Docker, and Linux. Version Control: Git.</desc>
+  <desc id="scene-description">A sun, ringed planets, a small moon, a galaxy, a blue whale, a squid, a jellyfish, a pizza slice, a coffee mug, and an open book with a starfish drift and rotate around the Tech Stack. MERN Stack: MongoDB, Express.js, React, Node.js. Languages: Python and JavaScript. Backend: FastAPI and Celery. Databases and Caching: MySQL and Redis. Infrastructure: AWS, Docker, and Linux. Version Control: Git.</desc>
   <clipPath id="space-clip"><rect x="1" y="1" width="${width - 2}" height="${height - 2}" rx="14"/></clipPath>
   <g clip-path="url(#space-clip)">
     <rect width="${width}" height="${height}" fill="#0c0c0c"/>
