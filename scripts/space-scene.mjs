@@ -138,6 +138,41 @@ function jellyfish() {
   return `${bell}${folds}${tentacles}`;
 }
 
+function pizza() {
+  const crust = outline([-30, -19], [
+    [[-12, -33], [12, -33], [30, -19]],
+    [[33, -16], [31, -11], [28, -11]],
+    [[10, -23], [-10, -23], [-28, -11]],
+    [[-32, -12], [-33, -16], [-30, -19]],
+  ]);
+  const slice = outline([-27, -11], [
+    [[-18, 3], [-9, 18], [0, 32]],
+    [[9, 18], [18, 3], [27, -11]],
+  ]);
+  const toppings = [[-12, -9, 4.1], [10, -6, 4.9], [-2, 7, 3.9]].map(([x, y, radius]) =>
+    scatter(8, i => dot(x + radius * Math.cos(i * turn / 8), y + radius * Math.sin(i * turn / 8), .82, .78)),
+  ).join('\n');
+  return [crust, slice, toppings, dot(17, -11, .9, .62), dot(-9, 5, .87, .66), dot(4, 18, .9, .67)].join('\n');
+}
+
+function coffeeMug() {
+  const rim = dottedOrbit(22, .21, 0, 38, .88);
+  const cup = outline([-22, 0], [
+    [[-21, 10], [-19, 24], [-16, 28]],
+    [[-9, 34], [9, 34], [16, 28]],
+    [[19, 24], [21, 10], [22, 0]],
+  ]);
+  const handle = outline([21, 4], [
+    [[41, -4], [45, 23], [19, 23]],
+    [[18, 21], [18, 18], [21, 17]],
+    [[36, 17], [35, 5], [21, 10]],
+  ]);
+  const steam = [-8, 6].map(x => outline([x, -10], [
+    [[x - 10, -19], [x + 9, -22], [x + 1, -32]],
+  ], 3.2)).join('\n');
+  return [rim, cup, handle, steam].join('\n');
+}
+
 function driftingObject(art, { x, y, scale = 1, tilt = 0, distance = 16, period = 24, phase = 0, turnBy = 16 }) {
   const positions = Array.from({ length: 24 }, (_, i) => {
     const step = i * turn / 24 + phase;
@@ -232,6 +267,8 @@ function renderScene(logos, compact) {
     { art: dottedOrbit(83, .36, -15, 135, .41) + sphere(54, 77), desktop: [570, 603, 1.06], mobile: [181, 527, .64], period: 40, tilt: -12 },
     { art: sphere(13, 3), desktop: [348, 598, 1], mobile: [103, 97, .65], period: 19, turnBy: 38 },
     { art: sphere(10, 51), desktop: [747, 590, 1.25], mobile: [232, 550, .75], period: 24, turnBy: 28 },
+    { art: pizza(), desktop: [540, 65, 1.06], mobile: [166, 55, .55], period: 23, tilt: -20, turnBy: 31 },
+    { art: coffeeMug(), desktop: [135, 607, 1.14], mobile: [38, 484, .5], period: 31, tilt: 13, turnBy: 16 },
   ];
   const sky = bodies.map((body, index) => {
     const [x, y, scale] = compact ? body.mobile : body.desktop;
@@ -239,7 +276,7 @@ function renderScene(logos, compact) {
   }).join('\n');
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="img" aria-labelledby="scene-title scene-description" font-family="system-ui,Segoe UI,Arial,sans-serif">
   <title id="scene-title">Tech Stack in a white-dot space scene</title>
-  <desc id="scene-description">A sun, ringed planets, a galaxy, a blue whale, a squid, and a jellyfish drift and rotate around the Tech Stack. MERN Stack: MongoDB, Express.js, React, Node.js. Languages: Python and JavaScript. Backend: FastAPI and Celery. Databases and Caching: MySQL and Redis. Infrastructure: AWS, Docker, and Linux. Version Control: Git.</desc>
+  <desc id="scene-description">A sun, ringed planets, a galaxy, a blue whale, a squid, a jellyfish, a pizza slice, and a coffee mug drift and rotate around the Tech Stack. MERN Stack: MongoDB, Express.js, React, Node.js. Languages: Python and JavaScript. Backend: FastAPI and Celery. Databases and Caching: MySQL and Redis. Infrastructure: AWS, Docker, and Linux. Version Control: Git.</desc>
   <clipPath id="space-clip"><rect x="1" y="1" width="${width - 2}" height="${height - 2}" rx="14"/></clipPath>
   <g clip-path="url(#space-clip)">
     <rect width="${width}" height="${height}" fill="#0c0c0c"/>
